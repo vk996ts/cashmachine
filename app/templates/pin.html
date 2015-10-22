@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}{% if error %}{{ error }}{% else %}Enter PIN{% endif %}{% endblock %}
+{% block content %}
+    <form method="post" class="pin">
+        <input type="hidden" name="page" id="page" value="pin" />
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% include 'includes/keyboard.html' %}
+    </form>
+{% endblock %}

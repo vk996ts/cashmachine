@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block title %}Account Amount <span id="cn">{{ user.number }}</span>, {% now "d.m.Y" %}{% endblock %}
+{% block content %}
+    <div class="card-number">{{ user.amount }}</div>
+    <a class="interface_button interface_righttop" href="/main/">Back</a>
+    <a class="interface_button interface_rightbottom" href="/exit/">Quit</a>
+{% endblock %}

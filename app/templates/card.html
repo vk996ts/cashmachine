@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Enter Card Number{% endblock %}
+{% block content %}
+<form method="post">
+    <input type="hidden" name="page" id="page" value="card" />
+    {% csrf_token %}
+    {{ form.as_p }}
+    {% include 'includes/keyboard.html' %}
+</form>
+{% endblock %}

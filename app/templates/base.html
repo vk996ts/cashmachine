@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Cash Machine</title>
+    <link href='http://fonts.googleapis.com/css?family=Istok+Web:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ STATIC_URL }}/css/style.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="{{ STATIC_URL }}/js/keyboard.js"></script>
+</head>
+<body>
+<div id="workplace">
+    <div class="inner">
+        <h1 id="page_title">{% block title %}{% endblock %}</h1>
+        <div class="data">
+            <div class="cashmachine">
+            {% block content %}{% endblock %}
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

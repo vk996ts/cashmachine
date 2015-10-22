@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}{{ error }}{% if success %} from <span id="cn">{{ user.number }}</span><br/>{% now "d.m.Y" %}{% endif %}{% endblock %}
+{% block content %}
+    {% if success %}
+    <h2>You get: {{ cash }}</h2>
+    <h2>Available Amount: {{ user.amount }}</h2>
+    {% endif %}
+    {% if code == '5' %}
+        <a class="interface_button interface_righttop" href="/">Back</a>
+    {% else %}
+    <a class="interface_button interface_righttop" href="/main/">Back</a>
+    <a class="interface_button interface_rightbottom" href="/exit/">Quit</a>
+    {% endif %}
+{% endblock %}

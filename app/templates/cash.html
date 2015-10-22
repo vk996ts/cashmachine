@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Enter Amount{% endblock %}
+{% block content %}
+    <a class="interface_button interface_righttop" href="/main/">Back</a>
+    <a class="interface_button interface_rightbottom" href="/exit/">Quit</a>
+    <form method="post">
+        <input type="hidden" name="page" id="page" value="cash" />
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% include 'includes/keyboard.html' %}
+    </form>
+{% endblock %}
